@@ -1,4 +1,8 @@
 export function mean(numbers: number[]): number {
+  if (numbers.length === 0) {
+    throw new Error("Array must not be empty");
+  }
+
   let sum: number = 0;
   for (let number of numbers) {
     sum += number;
