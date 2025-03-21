@@ -10,6 +10,9 @@ export function multiply(faktorEins: number, faktorZwei: number) : number {
   return faktorEins * faktorZwei;
 }
 
-export function divide(divisor: number, dividend: number) : number {
-  return divisor / dividend;
+export function divide(dividend: number, divisor: number): number {
+  if (divisor === 0) {
+    throw new Error("Division durch 0 ist nicht erlaubt");
+  }
+  return dividend / divisor;
 }

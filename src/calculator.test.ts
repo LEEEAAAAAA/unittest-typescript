@@ -52,3 +52,11 @@ test("divide sox and three to get two", () => {
   expect(actual).toBe(expected);
 });
 
+test("division durch null wirft einen Fehler", () => {
+  // Arrange
+  const dividend = 10;
+  const divisor = 0;
+
+  // Act + Assert
+  expect(() => divide(dividend, divisor)).toThrow("Division durch 0 ist nicht erlaubt");
+});
